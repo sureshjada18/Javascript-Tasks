@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="heading"><b>Exxtra content </b><strong>Welcome to java script getting content,innerText</strong></h1>
+<button onclick="displaycon()">click me</button>
+
+<script>
+function displaycon(){
+    var element=document.getElementById("heading").innerText;
+    var content=document.getElementById("heading").innerHTML;
+   /* console.log("innerText:",element);
+    console.log("innerHTML:",content);
+    document.getElementById("heading").innerText="welcome to setting the data or modiffying the data using innertext";*/
+element="<h1>modifying the content,without changing the html tag using innerText,only content will be changed</h1>";
+document.write("innerText:",element);
+content="<h1>modifying the content,changing the content on which the tag applied using innerHTML</h1>";
+document.write("innerHTML:",content);
+}
+</script>
+</body>
+</html>

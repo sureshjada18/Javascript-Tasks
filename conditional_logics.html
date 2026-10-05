@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Logic</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e8ded2;
+            color: #3b2a24;
+        }
+        .container {
+            width: 90%;
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 35px 0 60px;
+        }
+        .main-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .main-heading h1 {
+            margin: 0;
+            font-size: 38px;
+            letter-spacing: 1px;
+            color: #3b2a24;
+        }
+        .main-heading p {
+            margin-top: 13px;
+            color: #75645a;
+            font-size: 19px;
+        }
+        .logic-section {
+            margin-bottom: 50px;
+        }
+        .section-heading {
+            background-color: #665047;
+            color: #f3ede6;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            font-size: 20px;
+        }
+        .logic-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .logic-box {
+            background-color: #f3ede6;
+            border: 1px solid #d6c7b8;
+            border-radius: 10px;
+            padding: 22px;
+            min-height: 235px;
+            box-shadow: 0 3px 10px rgba(59, 42, 36, 0.10);
+        }
+        .logic-box h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #4b3931;
+            font-size: 19px;
+        }
+        .logic-box p {
+            color: #75645a;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .inputs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 150px;
+            padding: 10px 12px;
+            border: 1px solid #c7b7a8;
+            border-radius: 6px;
+            background-color: #eee5dc;
+            color: #3b2a24;
+            font-size: 14px;
+            outline: none;
+        }
+        input:focus {
+            border-color: #8a7568;
+            background-color: #f7f1eb;
+        }
+        input::placeholder {
+            color: #8a7970;
+        }
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            background-color: #665047;
+            color: #f3ede6;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        button:hover {
+            background-color: #4b3931;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 11px 13px;
+            min-height: 42px;
+            border-radius: 6px;
+            background-color: #e8ded2;
+            border-left: 4px solid #8a7568;
+            color: #4b3931;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #75645a;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="main-heading">
+        <h1>JavaScript Conditional Logic</h1>
+        <p>Interactive practice of if, if-else and if-else-if statements</p>
+    </div>
+
+    <section class="logic-section">
+        <h2 class="section-heading">6 Logics Using IF Statement</h2>
+
+        <div class="logic-grid">
+
+            <div class="logic-box">
+                <h2>1. Positive Number</h2>
+                <p>Check whether the given number is positive.</p>
+                <div class="inputs">
+                    <input type="number" id="n1" placeholder="Enter number">
+                </div>
+                <button onclick="logic1()">Check</button>
+                <div class="result" id="result1"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>2. Even Number</h2>
+                <p>Check whether the given number is even.</p>
+                <div class="inputs">
+                    <input type="number" id="n2" placeholder="Enter number">
+                </div>
+                <button onclick="logic2()">Check</button>
+                <div class="result" id="result2"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>3. Divisible by 2 and 5</h2>
+                <p>Check whether the number is divisible by both 2 and 5.</p>
+                <div class="inputs">
+                    <input type="number" id="n3" placeholder="Enter number">
+                </div>
+                <button onclick="logic3()">Check</button>
+                <div class="result" id="result3"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>4. Multiple Conditions</h2>
+                <p>Check whether the number is positive, even, or greater than 100.</p>
+                <div class="inputs">
+                    <input type="number" id="n4" placeholder="Enter number">
+                </div>
+                <button onclick="logic4()">Check</button>
+                <div class="result" id="result4"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>5. Valid Triangle</h2>
+                <p>Check whether three given sides form a valid triangle.</p>
+                <div class="inputs">
+                    <input type="number" id="a5" placeholder="Side A">
+                    <input type="number" id="b5" placeholder="Side B">
+                    <input type="number" id="c5" placeholder="Side C">
+                </div>
+                <button onclick="logic5()">Check</button>
+                <div class="result" id="result5"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>6. Greater Than Three or Even</h2>
+                <p>Check whether X is greater than the other three numbers or is even.</p>
+                <div class="inputs">
+                    <input type="number" id="x6" placeholder="X">
+                    <input type="number" id="x61" placeholder="X1">
+                    <input type="number" id="x62" placeholder="X2">
+                    <input type="number" id="x63" placeholder="X3">
+                </div>
+                <button onclick="logic6()">Check</button>
+                <div class="result" id="result6"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="logic-section">
+        <h2 class="section-heading">6 Logics Using IF-ELSE Statement</h2>
+
+        <div class="logic-grid">
+
+            <div class="logic-box">
+                <h2>7. Positive or Negative</h2>
+                <p>Check whether the given number is positive or negative.</p>
+                <div class="inputs">
+                    <input type="number" id="number7" placeholder="Enter number">
+                </div>
+                <button onclick="logic7()">Check</button>
+                <div class="result" id="result7"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>8. Even or Odd</h2>
+                <p>Check whether the given number is even or odd.</p>
+                <div class="inputs">
+                    <input type="number" id="number8" placeholder="Enter number">
+                </div>
+                <button onclick="logic8()">Check</button>
+                <div class="result" id="result8"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>9. Addition Even or Odd</h2>
+                <p>Predict whether the addition of two numbers is even or odd without adding them.</p>
+                <div class="inputs">
+                    <input type="number" id="a9" placeholder="Number 1">
+                    <input type="number" id="b9" placeholder="Number 2">
+                </div>
+                <button onclick="logic9()">Check</button>
+                <div class="result" id="result9"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>10. Right-Angle Triangle</h2>
+                <p>Check whether three given sides form a right-angle triangle.</p>
+                <div class="inputs">
+                    <input type="number" id="t10" placeholder="Side 1">
+                    <input type="number" id="t101" placeholder="Side 2">
+                    <input type="number" id="t102" placeholder="Side 3">
+                </div>
+                <button onclick="logic10()">Check</button>
+                <div class="result" id="result10"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>11. Leap Year</h2>
+                <p>Check whether the given year is a leap year or not.</p>
+                <div class="inputs">
+                    <input type="number" id="year11" placeholder="Enter year">
+                </div>
+                <button onclick="logic11()">Check</button>
+                <div class="result" id="result11"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>12. Quadratic Equation</h2>
+                <p>Check whether the quadratic equation has real or imaginary roots.</p>
+                <div class="inputs">
+                    <input type="number" id="q12a" placeholder="q1">
+                    <input type="number" id="q12b" placeholder="q2">
+                    <input type="number" id="q12c" placeholder="q3">
+                </div>
+                <button onclick="logic12()">Check</button>
+                <div class="result" id="result12"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="logic-section">
+        <h2 class="section-heading">6 Logics Using IF-ELSE-IF Statement</h2>
+
+        <div class="logic-grid">
+
+            <div class="logic-box">
+                <h2>13. Student Grade</h2>
+                <p>Generate the grade based on the student's marks.</p>
+                <div class="inputs">
+                    <input type="number" id="marks13" placeholder="Enter marks">
+                </div>
+                <button onclick="logic13()">Check Grade</button>
+                <div class="result" id="result13"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>14. Purchase Discount</h2>
+                <p>Generate the discount based on the purchase bill.</p>
+                <div class="inputs">
+                    <input type="number" id="bill14" placeholder="Bill amount">
+                </div>
+                <button onclick="logic14()">Calculate</button>
+                <div class="result" id="result14"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>15. Biggest Among Three</h2>
+                <p>Find the biggest number among three given numbers.</p>
+                <div class="inputs">
+                    <input type="number" id="a15" placeholder="A">
+                    <input type="number" id="b15" placeholder="B">
+                    <input type="number" id="c15" placeholder="C">
+                </div>
+                <button onclick="logic15()">Find Largest</button>
+                <div class="result" id="result15"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>16. Quadratic Root Type</h2>
+                <p>Check whether the equation has different, same, or imaginary roots.</p>
+                <div class="inputs">
+                    <input type="number" id="a16" placeholder="q1">
+                    <input type="number" id="b16" placeholder="q2">
+                    <input type="number" id="c16" placeholder="q3">
+                </div>
+                <button onclick="logic16()">Check Roots</button>
+                <div class="result" id="result16"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>17. Income Tax</h2>
+                <p>Calculate the income tax based on the given income.</p>
+                <div class="inputs">
+                    <input type="number" id="income17" placeholder="Annual income">
+                </div>
+                <button onclick="logic17()">Calculate Tax</button>
+                <div class="result" id="result17"></div>
+            </div>
+
+            <div class="logic-box">
+                <h2>18. Multiple Subject Grade</h2>
+                <p>Calculate total, average, and grade based on five subjects.</p>
+                <div class="inputs">
+                    <input type="number" id="java18" placeholder="Java">
+                    <input type="number" id="python18" placeholder="Python">
+                    <input type="number" id="dbms18" placeholder="DBMS">
+                    <input type="number" id="html18" placeholder="HTML">
+                    <input type="number" id="javascript18" placeholder="JavaScript">
+                </div>
+                <button onclick="logic18()">Calculate</button>
+                <div class="result" id="result18"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="footer">
+        JavaScript Conditional Logic Practice
+    </div>
+
+</div>
+
+<script src="conditional_logics_task.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+     <label>
+        Enter the Start:
+     </label>
+     <input type="number" id="st"><br><br>
+
+     <label>
+        Enter the Start:
+     </label>
+     <input type="number" id="ed"><br><br>
+     
+     <button onclick="sequence()">Display Sequence</button>
+    <script>
+          function sequence(){
+             let start=document.getElementById("st").value;
+             let end=document.getElementById("ed").value;
+             for(let i=start;i<=end;i++){
+               document.write(i+" ");
+             }
+
+         
+          }
+        
+    </script>
+</body>
+</html>

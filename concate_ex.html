@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String and Number Conversion</title>
+  <style>
+    *{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#eaf4f4;
+    color:#183642;
+}
+.container{
+    width:800px;
+    margin:40px auto;
+}
+h1{
+    text-align:center;
+    background:#16697a;
+    color:white;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+.card{
+    background:white;
+    padding:20px 30px;
+    margin-bottom:20px;
+    border-radius:12px;
+    border-left:6px solid #82c0cc;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+h2{
+    margin-top:0;
+    color:#16697a;
+}
+p{
+    background:#f0f8f8;
+    padding:10px 15px;
+    border-radius:6px;
+    margin:10px 0;
+}
+span{
+    color:#d35400;
+    font-weight:bold;
+}
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript String & Number Conversion</h1>
+        <div class="card">
+            <h2>Full Name</h2>
+            <p id="fullName"></p>
+        </div>
+        <div class="card">
+            <h2>String and Number</h2>
+            <p>String Value: <span id="strValue"></span></p>
+            <p>Number Value: <span id="numValue"></span></p>
+        </div>
+        <div class="card">
+            <h2>Type Conversion</h2>
+            <p>parseInt("25") → <span id="n1"></span></p>
+            <p>Data Type of n1 → <span id="n1Type"></span></p>
+            <p>parseFloat(10) → <span id="n2"></span></p>
+            <p>Data Type of n2 → <span id="n2Type"></span></p>
+            <p>parseInt("hi25") → <span id="n3"></span></p>
+            <p>Data Type of n3 → <span id="n3Type"></span></p>
+            <p>Number("25") → <span id="n4"></span></p>
+            <p>Data Type of n4 → <span id="n4Type"></span></p>
+        </div>
+    </div>
+    <script src="concate_ex.js"></script>
+</body>
+</html>

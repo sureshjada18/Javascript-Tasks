@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript Conditional Logic</h1>
+        <p class="subtitle">Practice IF, IF-ELSE, ELSE-IF and Truthy/Falsy</p>
+
+   
+        <div class="card">
+            <h2>1. IF Condition</h2>
+
+            <label>Enter n:</label>
+            <input type="number" id="ifN" value="10">
+
+            <button onclick="checkIf()">Check</button>
+
+            <p id="ifResult" class="result"></p>
+        </div>
+
+
+
+        <div class="card">
+            <h2>2. IF - ELSE Condition</h2>
+
+            <label>Enter n:</label>
+            <input type="number" id="elseN" value="10">
+
+            <label>Enter n1:</label>
+            <input type="number" id="elseN1" value="12">
+
+            <button onclick="checkIfElse()">Check</button>
+
+            <p id="elseResult" class="result"></p>
+        </div>
+
+
+      
+        <div class="card">
+            <h2>3. IF - ELSE IF - ELSE</h2>
+
+            <label>Enter a number:</label>
+            <input type="number" id="gradeNumber">
+
+            <button onclick="checkElseIf()">Check</button>
+
+            <p id="elseIfResult" class="result"></p>
+        </div>
+
+
+        <div class="card">
+            <h2>4. Logical AND (&&)</h2>
+
+            <label>Enter n:</label>
+            <input type="number" id="andN" value="10">
+
+            <label>Enter n1:</label>
+            <input type="number" id="andN1" value="10">
+
+            <button onclick="checkAnd()">Check</button>
+
+            <p id="andResult" class="result"></p>
+        </div>
+
+
+
+        <div class="card">
+            <h2>5. Truthy / Falsy Values</h2>
+
+            <label>Select a value:</label>
+
+            <select id="truthyValue">
+                <option value="0">0</option>
+                <option value="">"" (empty string)</option>
+                <option value="null">null</option>
+                <option value="undefined">undefined</option>
+                <option value="NaN">NaN</option>
+                <option value="false">false</option>
+                <option value="10">10</option>
+                <option value="hello">"hello"</option>
+                <option value="true">true</option>
+            </select>
+
+            <button onclick="checkTruthyFalsy()">Check</button>
+
+            <p id="truthyResult" class="result"></p>
+        </div>
+
+    </div>
+
+    <script src="conditional_statements_ex1.js"></script>
+
+</body>
+</html>

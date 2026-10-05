@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Break and Continue Statements</title>
+    <style>
+        body{
+            font-family:Arial,sans-serif;
+            background:#f3f7fb;
+            margin:0;
+            padding:30px;
+        }
+        h1{
+            text-align:center;
+            color:#263b5a;
+        }
+        .container{
+            max-width:700px;
+            margin:auto;
+        }
+        .box{
+            background:#ffffff;
+            border:1px solid #ccd6e0;
+            border-radius:8px;
+            padding:20px;
+            margin-bottom:20px;
+            box-shadow:0 2px 6px #d7e0e8;
+        }
+        h2{
+            color:#285f8f;
+        }
+        button{
+            background:#285f8f;
+            color:white;
+            border:none;
+            padding:9px 18px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        button:hover{
+            background:#194568;
+        }
+        input{
+            padding:9px;
+            border:1px solid #b9c5d1;
+            border-radius:5px;
+            margin:5px 0;
+        }
+        textarea{
+            width:95%;
+            height:120px;
+            margin-top:10px;
+            padding:9px;
+            border:1px solid #b9c5d1;
+            border-radius:5px;
+            background:#eef5fb;
+            resize:none;
+            box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Break and Continue Statements</h1>
+    <div class="container">
+        <div class="box">
+            <h2>1. Break Statement</h2>
+            <button onclick="logic1()">Run</button>
+            <br>
+            <textarea id="result1" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>2. Break in While Loop</h2>
+            <button onclick="logic2()">Run</button>
+            <br>
+            <textarea id="result2" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>3. First Number Divisible by 5</h2>
+            <button onclick="logic3()">Run</button>
+            <br>
+            <textarea id="result3" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>4. Last Number Divisible by 4 Between 50 and 60</h2>
+            <button onclick="logic4()">Run</button>
+            <br>
+            <textarea id="result4" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>5. Display First Three Numbers</h2>
+            <input type="number" id="start" value="1" placeholder="Start">
+            <input type="number" id="end" value="10" placeholder="End">
+            <br>
+            <button onclick="logic5()">Run</button>
+            <br>
+            <textarea id="result5" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>6. Last Two Even Numbers from 25 to 13</h2>
+            <button onclick="logic6()">Run</button>
+            <br>
+            <textarea id="result6" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>7. Continue Statement</h2>
+            <button onclick="logic7()">Run</button>
+            <br>
+            <textarea id="result7" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>8. Skip 13 and 17</h2>
+            <button onclick="logic8()">Run</button>
+            <br>
+            <textarea id="result8" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>9. Skip Unlucky Year 2025</h2>
+            <button onclick="logic9()">Run</button>
+            <br>
+            <textarea id="result9" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>10. Skip Number 5 Using While Loop</h2>
+            <button onclick="logic10()">Run</button>
+            <br>
+            <textarea id="result10" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>11. Unlucky Year 2025 Using While Loop</h2>
+            <button onclick="logic11()">Run</button>
+            <br>
+            <textarea id="result11" readonly></textarea>
+        </div>
+    </div>
+    <script src="jumping_statements.js"></script>
+</body>
+</html>

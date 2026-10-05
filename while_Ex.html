@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Loop Programs</title>
+    <style>
+        body{
+            font-family:Arial,sans-serif;
+            background:#f2f6fc;
+            margin:0;
+            padding:30px;
+        }
+        h1{
+            text-align:center;
+            color:#1e3a5f;
+        }
+        .container{
+            max-width:700px;
+            margin:auto;
+        }
+        .box{
+            background:white;
+            border:1px solid #d0d7de;
+            border-radius:8px;
+            padding:20px;
+            margin-bottom:20px;
+            box-shadow:0 2px 6px #d9e2ec;
+        }
+        h2{
+            color:#245b8f;
+        }
+        button{
+            background:#245b8f;
+            color:white;
+            border:none;
+            padding:9px 18px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        button:hover{
+            background:#173f63;
+        }
+        input,textarea{
+            width:95%;
+            padding:9px;
+            margin-top:8px;
+            border:1px solid #b8c4d1;
+            border-radius:5px;
+            box-sizing:border-box;
+        }
+        textarea{
+            height:120px;
+            resize:none;
+        }
+        .output{
+            background:#eef5fb;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Loop Programs</h1>
+    <div class="container">
+        <div class="box">
+            <h2>1. Print Multiples of 10</h2>
+            <button onclick="logic1()">Run</button>
+            <br>
+            <textarea id="result1" class="output" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>2. Print Sequence 4 to 16</h2>
+            <button onclick="logic2()">Run</button>
+            <br>
+            <textarea id="result2" class="output" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>3. Print Numbers from 10 to 1</h2>
+            <button onclick="logic3()">Run</button>
+            <br>
+            <textarea id="result3" class="output" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>4. Print Sequence 95 to 5</h2>
+            <button onclick="logic4()">Run</button>
+            <br>
+            <textarea id="result4" class="output" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>5. Sum of Numbers from 2 to 6</h2>
+            <button onclick="logic5()">Run</button>
+            <br>
+            <textarea id="result5" class="output" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>6. Sum of Numbers from 1 to 10</h2>
+            <button onclick="logic6()">Run</button>
+            <br>
+            <textarea id="result6" class="output" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>7. Factorial of a Number</h2>
+            <input type="number" id="factorialNumber" placeholder="Enter a number">
+            <br>
+            <button onclick="logic7()">Run</button>
+            <br>
+            <textarea id="result7" class="output" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>8. Nested Loop Pattern</h2>
+            <button onclick="logic8()">Run</button>
+            <br>
+            <textarea id="result8" class="output" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>9. Print Even Numbers from 1 to 10</h2>
+            <button onclick="logic9()">Run</button>
+            <br>
+            <textarea id="result9" class="output" readonly></textarea>
+        </div>
+        <div class="box">
+            <h2>10. Factorials from 1 to 5</h2>
+            <button onclick="logic10()">Run</button>
+            <br>
+            <textarea id="result10" class="output" readonly></textarea>
+        </div>
+    </div>
+    <script src="while_Ex.js"></script>
+</body>
+</html>

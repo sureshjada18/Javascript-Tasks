@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #dff6ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 380px;
+            margin: 80px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 5px 20px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00695c;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        #result {
+            background-color: #f1f8e9;
+            color: #222;
+            font-weight: bold;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        button {
+            width: 48%;
+            padding: 12px;
+            margin: 1%;
+            border: none;
+            border-radius: 7px;
+            color: white;
+            background-color: #00897b;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #00695c;
+        }
+
+        .clear {
+            width: 98%;
+            background-color: #e53935;
+        }
+
+        .clear:hover {
+            background-color: #b71c1c;
+        }
+
+        .message {
+            text-align: center;
+            color: red;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Arithmetic Operations</h1>
+
+        <form>
+
+            <label for="num1">Enter First Number</label>
+            <input type="number" id="num1" placeholder="Enter first number">
+
+            <label for="num2">Enter Second Number</label>
+            <input type="number" id="num2" placeholder="Enter second number">
+
+            <label for="result">Result</label>
+            <input type="text" id="result" readonly>
+
+            <div class="buttons">
+
+                <button type="button" onclick="add()">ADD</button>
+
+                <button type="button" onclick="subtract()">SUBTRACT</button>
+
+                <button type="button" onclick="multiply()">MULTIPLY</button>
+
+                <button type="button" onclick="modulus()">MODULUS</button>
+
+                <button type="button" onclick="exponential()">EXPONENTIAL</button>
+
+                <button type="button" onclick="divide()">DIVIDE</button>
+
+                <button type="button" class="clear" onclick="clearResult()">CLEAR</button>
+
+            </div>
+
+            <p id="message" class="message"></p>
+
+        </form>
+
+    </div>
+
+
+    <script>
+
+        function getNumbers() {
+
+            var n1 = document.getElementById("num1").value;
+            var n2 = document.getElementById("num2").value;
+
+            if (n1 === "" || n2 === "") {
+                document.getElementById("message").innerText =
+                    "Please enter both numbers.";
+
+                return null;
+            }
+
+            document.getElementById("message").innerText = "";
+
+            var a = Number(n1);
+            var b = Number(n2);
+
+            return [a, b];
+        }
+
+
+        function add() {
+
+            var numbers = getNumbers();
+
+            if (numbers == null) {
+                return;
+            }
+
+            var a = numbers[0];
+            var b = numbers[1];
+
+            var result = a + b;
+
+            document.getElementById("result").value = result;
+        }
+
+
+        function subtract() {
+
+            var numbers = getNumbers();
+
+            if (numbers == null) {
+                return;
+            }
+
+            var a = numbers[0];
+            var b = numbers[1];
+
+            var result = a - b;
+
+            document.getElementById("result").value = result;
+        }
+
+
+        function multiply() {
+
+            var numbers = getNumbers();
+
+            if (numbers == null) {
+                return;
+            }
+
+            var a = numbers[0];
+            var b = numbers[1];
+
+            var result = a * b;
+
+            document.getElementById("result").value = result;
+        }
+
+
+        function modulus() {
+
+            var numbers = getNumbers();
+
+            if (numbers == null) {
+                return;
+            }
+
+            var a = numbers[0];
+            var b = numbers[1];
+
+            if (b === 0) {
+                document.getElementById("message").innerText =
+                    "Cannot perform modulus by zero.";
+                return;
+            }
+
+            var result = a % b;
+
+            document.getElementById("result").value = result;
+        }
+
+
+        function exponential() {
+
+            var numbers = getNumbers();
+
+            if (numbers == null) {
+                return;
+            }
+
+            var a = numbers[0];
+            var b = numbers[1];
+
+            var result = a ** b;
+
+            document.getElementById("result").value = result;
+        }
+
+
+        function divide() {
+
+            var numbers = getNumbers();
+
+            if (numbers == null) {
+                return;
+            }
+
+            var a = numbers[0];
+            var b = numbers[1];
+
+            if (b === 0) {
+                document.getElementById("message").innerText =
+                    "Cannot divide by zero.";
+                return;
+            }
+
+            var result = a / b;
+
+            document.getElementById("result").value = result;
+        }
+
+
+        function clearResult() {
+
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("result").value = "";
+            document.getElementById("message").innerText = "";
+        }
+
+    </script>
+
+</body>
+</html>

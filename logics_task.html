@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 Logic Building Tasks</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+            padding: 30px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 32px;
+            color: #243b55;
+            margin-bottom: 8px;
+        }
+        header p {
+            color: #666;
+            font-size: 15px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.15s ease;
+        }
+        .card:hover {
+            box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+        }
+        .number {
+            display: inline-block;
+            background: #243b55;
+            color: white;
+            padding: 4px 9px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-bottom: 10px;
+        }
+        .card h2 {
+            font-size: 19px;
+            color: #243b55;
+            margin-bottom: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 9px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+        input:focus {
+            border-color: #243b55;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 3px;
+            border: none;
+            border-radius: 6px;
+            background: #243b55;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1b2e43;
+        }
+        .result {
+            margin-top: 12px;
+            padding: 10px;
+            min-height: 40px;
+            background: #f1f3f5;
+            border-radius: 6px;
+            border-left: 3px solid #243b55;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 26px;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Logic Building Tasks</h1>
+            <p>HTML + CSS + JavaScript</p>
+        </header>
+        <div class="grid">
+            <div class="card">
+                <span class="number">Logic 01</span>
+                <h2>Average of 3 Numbers</h2>
+                <input type="number" id="avg1" placeholder="Enter first number">
+                <input type="number" id="avg2" placeholder="Enter second number">
+                <input type="number" id="avg3" placeholder="Enter third number">
+                <button onclick="averageThree()">Calculate Average</button>
+                <div class="result" id="averageResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 02</span>
+                <h2>Average Using DOM</h2>
+                <input type="number" id="domAvg1" placeholder="Enter first number">
+                <input type="number" id="domAvg2" placeholder="Enter second number">
+                <input type="number" id="domAvg3" placeholder="Enter third number">
+                <button onclick="averageUsingDOM()">Calculate Average</button>
+                <div class="result" id="domAverageResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 03</span>
+                <h2>Sum of First n Natural Numbers</h2>
+                <input type="number" id="sumN" placeholder="Enter n">
+                <button onclick="sumNatural()">Calculate Sum</button>
+                <div class="result" id="sumResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 04</span>
+                <h2>Average of First n Natural Numbers</h2>
+                <input type="number" id="avgN" placeholder="Enter n">
+                <button onclick="averageNatural()">Calculate Average</button>
+                <div class="result" id="avgNaturalResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 05</span>
+                <h2>Profit Percentage</h2>
+                <input type="number" id="costPrice" placeholder="Enter Cost Price">
+                <input type="number" id="sellingPrice" placeholder="Enter Selling Price">
+                <button onclick="profitPercentage()">Calculate Profit %</button>
+                <div class="result" id="profitResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 06</span>
+                <h2>Simple Interest</h2>
+                <input type="number" id="principal" placeholder="Enter Principal">
+                <input type="number" id="rate" placeholder="Enter Rate">
+                <input type="number" id="time" placeholder="Enter Time">
+                <button onclick="simpleInterest()">Calculate Interest</button>
+                <div class="result" id="siResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 07</span>
+                <h2>Missing Angle of Triangle</h2>
+                <input type="number" id="angleA" placeholder="Enter Angle A">
+                <input type="number" id="angleB" placeholder="Enter Angle B">
+                <button onclick="missingAngle()">Find Missing Angle</button>
+                <div class="result" id="angleResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 08</span>
+                <h2>Last Digit of a Number</h2>
+                <input type="number" id="lastDigitInput" placeholder="Enter number">
+                <button onclick="lastDigit()">Find Last Digit</button>
+                <div class="result" id="lastDigitResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 09</span>
+                <h2>Remove Last Digit</h2>
+                <input type="number" id="removeDigitInput" placeholder="Enter number">
+                <button onclick="removeLastDigit()">Remove Last Digit</button>
+                <div class="result" id="removeDigitResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 10</span>
+                <h2>First Digit of 3-Digit Number</h2>
+                <input type="number" id="threeDigit" placeholder="Enter 3-digit number">
+                <button onclick="firstDigitThree()">Find First Digit</button>
+                <div class="result" id="threeDigitResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 11</span>
+                <h2>First Digit of 5-Digit Number</h2>
+                <input type="number" id="fiveDigit" placeholder="Enter 5-digit number">
+                <button onclick="firstDigitFive()">Find First Digit</button>
+                <div class="result" id="fiveDigitResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 12</span>
+                <h2>Celsius → Fahrenheit</h2>
+                <input type="number" id="celsius" placeholder="Enter Celsius">
+                <button onclick="celsiusToFahrenheit()">Convert</button>
+                <div class="result" id="fahrenheitResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 13</span>
+                <h2>Fahrenheit → Celsius</h2>
+                <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit">
+                <button onclick="fahrenheitToCelsius()">Convert</button>
+                <div class="result" id="celsiusResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 14</span>
+                <h2>Gross Salary</h2>
+                <input type="number" id="basicSalary" placeholder="Enter Basic Salary">
+                <input type="number" id="hra" placeholder="Enter HRA">
+                <input type="number" id="da" placeholder="Enter DA">
+                <button onclick="grossSalary()">Calculate Salary</button>
+                <div class="result" id="salaryResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 15</span>
+                <h2>Swap Using Third Variable</h2>
+                <input type="number" id="swapA" placeholder="Enter A">
+                <input type="number" id="swapB" placeholder="Enter B">
+                <button onclick="swapWithThird()">Swap Numbers</button>
+                <div class="result" id="swapThirdResult">Result will appear here</div>
+            </div>
+            <div class="card">
+                <span class="number">Logic 16</span>
+                <h2>Swap Without Third Variable</h2>
+                <input type="number" id="swapNoA" placeholder="Enter A">
+                <input type="number" id="swapNoB" placeholder="Enter B">
+                <button onclick="swapWithoutThird()">Swap Numbers</button>
+                <div class="result" id="swapNoThirdResult">Result will appear here</div>
+            </div>
+        </div>
+        <footer>
+            <p>Logic Building Lab | HTML | CSS | JavaScript<sub> &nbsp;; &nbsp; &nbsp;- suresh jada</sub></p>
+        </footer>
+    </div>
+    <script>
+        function averageThree() {
+            let a = parseInt(document.getElementById("avg1").value);
+            let b = parseInt(document.getElementById("avg2").value);
+            let c = parseInt(document.getElementById("avg3").value);
+            let average = (a + b + c) / 3;
+            document.getElementById("averageResult").innerText = "Average = " + average;
+        }
+        function averageUsingDOM() {
+            let a = parseInt(document.getElementById("domAvg1").value);
+            let b = parseInt(document.getElementById("domAvg2").value);
+            let c = parseInt(document.getElementById("domAvg3").value);
+            let sum = a + b + c;
+            let average = sum / 3;
+            document.getElementById("domAverageResult").innerText = "Average = " + average;
+        }
+        function sumNatural() {
+            let n = parseInt(document.getElementById("sumN").value);
+            let sum = n * (n + 1) / 2;
+            document.getElementById("sumResult").innerText = "Sum = " + sum;
+        }
+        function averageNatural() {
+            let n = parseInt(document.getElementById("avgN").value);
+            let average = (n + 1) / 2;
+            document.getElementById("avgNaturalResult").innerText = "Average = " + average;
+        }
+        function profitPercentage() {
+            let cp = parseInt(document.getElementById("costPrice").value);
+            let sp = parseInt(document.getElementById("sellingPrice").value);
+            let profit = sp - cp;
+            let percentage = (profit / cp) * 100;
+            document.getElementById("profitResult").innerText = "Profit = " + profit + " | Profit Percentage = " + percentage + "%";
+        }
+        function simpleInterest() {
+            let p = parseInt(document.getElementById("principal").value);
+            let r = parseInt(document.getElementById("rate").value);
+            let t = parseInt(document.getElementById("time").value);
+            let si = (p * r * t) / 100;
+            document.getElementById("siResult").innerText = "Simple Interest = " + si;
+        }
+        function missingAngle() {
+            let a = parseInt(document.getElementById("angleA").value);
+            let b = parseInt(document.getElementById("angleB").value);
+            let missing = 180 - (a + b);
+            document.getElementById("angleResult").innerText = "Missing Angle = " + missing + "°";
+        }
+        function lastDigit() {
+            let n = parseInt(document.getElementById("lastDigitInput").value);
+            let digit = Math.abs(n) % 10;
+            document.getElementById("lastDigitResult").innerText = "Last Digit = " + digit;
+        }
+        function removeLastDigit() {
+            let n = parseInt(document.getElementById("removeDigitInput").value);
+            let result = Math.trunc(n / 10);
+            document.getElementById("removeDigitResult").innerText = "After removing last digit = " + result;
+        }
+        function firstDigitThree() {
+            let n = parseInt(document.getElementById("threeDigit").value);
+            let result = Math.floor(Math.abs(n) / 100);
+            document.getElementById("threeDigitResult").innerText = "First Digit = " + result;
+        }
+        function firstDigitFive() {
+            let n = parseInt(document.getElementById("fiveDigit").value);
+            let result = Math.floor(Math.abs(n) / 10000);
+            document.getElementById("fiveDigitResult").innerText = "First Digit = " + result;
+        }
+        function celsiusToFahrenheit() {
+            let c = parseInt(document.getElementById("celsius").value);
+            let f = (c * 9 / 5) + 32;
+            document.getElementById("fahrenheitResult").innerText = "Fahrenheit = " + f.toFixed(2) + " °F";
+        }
+        function fahrenheitToCelsius() {
+            let f = parseInt(document.getElementById("fahrenheit").value);
+            let c = (f - 32) * 5 / 9;
+            document.getElementById("celsiusResult").innerText = "Celsius = " + c.toFixed(2) + " °C";
+        }
+        function grossSalary() {
+            let basic = parseInt(document.getElementById("basicSalary").value);
+            let hra = parseInt(document.getElementById("hra").value);
+            let da = parseInt(document.getElementById("da").value);
+            let gross = basic + hra + da;
+            document.getElementById("salaryResult").innerText = "Gross Salary = ₹" + gross.toFixed(2);
+        }
+        function swapWithThird() {
+            let a = parseInt(document.getElementById("swapA").value);
+            let b = parseInt(document.getElementById("swapB").value);
+            let temp = a;
+            a = b;
+            b = temp;
+            document.getElementById("swapThirdResult").innerText = "After Swap → A = " + a + ", B = " + b;
+        }
+        function swapWithoutThird() {
+            let a = parseInt(document.getElementById("swapNoA").value);
+            let b = parseInt(document.getElementById("swapNoB").value);
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            document.getElementById("swapNoThirdResult").innerText = "After Swap → A = " + a + ", B = " + b;
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Switch Case Examples</title>
+<style>
+body{
+    font-family:Arial;
+    margin:30px;
+}
+.container{
+    border:1px solid #ccc;
+    padding:20px;
+    margin-bottom:20px;
+    width:500px;
+}
+input{
+    padding:8px;
+    margin:5px;
+}
+button{
+    padding:8px 15px;
+    margin:5px;
+    cursor:pointer;
+}
+textarea{
+    width:95%;
+    height:100px;
+    margin-top:10px;
+}
+</style>
+</head>
+<body>
+<h1>JavaScript Switch Case</h1>
+<div class="container">
+<h2>1. Switch Case Matching</h2>
+<label>Enter Value:</label>
+<input type="text" id="switchValue">
+<button onclick="switchExample()">Run</button>
+<textarea id="switchResult" readonly></textarea>
+</div>
+<div class="container">
+<h2>2. Switch Case Calculator</h2>
+<label>Number 1:</label>
+<input type="number" id="n1">
+<br>
+<label>Number 2:</label>
+<input type="number" id="n2">
+<br>
+<label>Operator:</label>
+<input type="text" id="operator" maxlength="1">
+<button onclick="calculator()">Calculate</button>
+<textarea id="calculatorResult" readonly></textarea>
+</div>
+<div class="container">
+<h2>3. Switch Fall-Through</h2>
+<label>Enter Operator:</label>
+<input type="text" id="fallOperator" maxlength="1">
+<button onclick="fallThrough()">Run</button>
+<textarea id="fallResult" readonly></textarea>
+</div>
+<script src="switch_case_ex.js"></script>
+</body>
+</html>
